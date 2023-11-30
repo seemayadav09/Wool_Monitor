@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../hooks/useCart';
 import classes from './header.module.css';
 import { useAuth } from '../../hooks/useAuth';
+import sheep from './Sheep.png';
 
 export default function Header() {
   const { user, logout } = useAuth();
@@ -13,8 +14,10 @@ export default function Header() {
     <header className={classes.header}>
       <div className={classes.container}>
         <Link to="/" className={classes.logo}>
+         
           Wool Monitoring!
         </Link>
+        <img src={sheep}width={50} height={50}></img>
         <nav>
           <ul>
             {user ? (
@@ -26,8 +29,10 @@ export default function Header() {
                   <a onClick={logout}>Logout</a>
                 </div>
               </li>
-            ) : (
+            ) : (<>
               <Link to="/login">Login</Link>
+              <Link to="/login">Register</Link>
+              </>
             )}
 
             <li>

@@ -4,10 +4,14 @@
 }
 
 .container a {
-  background-color: #f0f0f0;
-  padding: 0.3rem 1rem;
-  margin: 0.2rem 0.15rem;
+  background-color: #f6efef;
+  padding: 5px 15px;
+  margin: 3px 5px;
+  color: #090c9b;
+  font-weight: 500;
   border-radius: 10rem;
-  font-weight: 600;
-  color: blue;
+  transition: all ease-in .5s;
+}
+.container a:hover{
+    transform: scale(1.1);
 }
